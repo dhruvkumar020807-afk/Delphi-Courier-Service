@@ -109,7 +109,9 @@ end;
 
 procedure TFrmAdminViewLogs.BtnAdminUndoClick(Sender: TObject);
 begin // canceling any changes made
-  RedAdminLogs.Lines.LoadFromFile('ADMIN LOGIN LOG.txt');
+  RedAdminLogs.Clear;
+  if FileExists('ADMIN LOGIN LOG.txt') then
+    RedAdminLogs.Lines.LoadFromFile('ADMIN LOGIN LOG.txt');
   BtnViewAdminLogs.Click;
 end;
 
@@ -195,21 +197,27 @@ end;
 
 procedure TFrmAdminViewLogs.BtnStaffUndoClick(Sender: TObject);
 begin // canceling any changes made
-  RedStaffLogs.Lines.LoadFromFile('STAFF LOGIN LOG.txt');
+  RedStaffLogs.Clear;
+  if FileExists('STAFF LOGIN LOG.txt') then
+    RedStaffLogs.Lines.LoadFromFile('STAFF LOGIN LOG.txt');
   RedStaffLogs.ReadOnly := true;
   BtnViewStaffLogs.Click;
 end;
 
 procedure TFrmAdminViewLogs.BtnViewAdminLogsClick(Sender: TObject);
 begin // view the admin logs
-  RedAdminLogs.Lines.LoadFromFile('ADMIN LOGIN LOG.txt');
+  RedAdminLogs.Clear;
+  if FileExists('ADMIN LOGIN LOG.txt') then
+    RedAdminLogs.Lines.LoadFromFile('ADMIN LOGIN LOG.txt');
   RedAdminLogs.ReadOnly := true;
   TSAdminLogs.Show;
 end;
 
 procedure TFrmAdminViewLogs.BtnViewCustomerLogsClick(Sender: TObject);
 begin // view the customer logs
-  RedCustomerLogs.Lines.LoadFromFile('CUSTOMER LOGIN LOG.txt');
+  RedCustomerLogs.Clear;
+  if FileExists('CUSTOMER LOGIN LOG.txt') then
+    RedCustomerLogs.Lines.LoadFromFile('CUSTOMER LOGIN LOG.txt');
   RedCustomerLogs.ReadOnly := true;
   TSCustomerLogs.Show;
 end;
@@ -231,15 +239,18 @@ var
   TUsers: TextFile;
   sLine: string;
 begin // view staff logs
-  AssignFile(TUsers, 'STAFF LOGIN LOG.txt');
-  Reset(TUsers);
   RedStaffLogs.Clear;
-  while not Eof(TUsers) do
+  if FileExists('STAFF LOGIN LOG.txt') then
   begin
-    ReadLn(TUsers, sLine);
-    RedStaffLogs.Lines.Add(sLine);
+    AssignFile(TUsers, 'STAFF LOGIN LOG.txt');
+    Reset(TUsers);
+    while not Eof(TUsers) do
+    begin
+      ReadLn(TUsers, sLine);
+      RedStaffLogs.Lines.Add(sLine);
+    end;
+    CloseFile(TUsers);
   end;
-  CloseFile(TUsers);
   RedStaffLogs.ReadOnly := true;
   TSStaffLogs.Show;
 end;
@@ -267,14 +278,9 @@ begin // initialising the form
   RedCustomerLogs.ReadOnly := true;
   RedAdminLogs.ReadOnly := true;
 
-  if FileExists('STAFF LOGIN LOG.txt') then
-    AssignFile(TStaffLogs, 'STAFF LOGIN LOG.txt');
-
-  if FileExists('ADMIN LOGIN LOG.txt') then
-    AssignFile(TAdminLogs, 'ADMIN LOGIN LOG.txt');
-
-  if FileExists('CUSTOMER LOGIN LOG.txt') then
-    AssignFile(TCustomerLogs, 'CUSTOMER LOGIN LOG.txt');
+  AssignFile(TStaffLogs, 'STAFF LOGIN LOG.txt');
+  AssignFile(TAdminLogs, 'ADMIN LOGIN LOG.txt');
+  AssignFile(TCustomerLogs, 'CUSTOMER LOGIN LOG.txt');
 
   BtnStaffDone.Hide;
   BtnStaffUndo.Hide;
