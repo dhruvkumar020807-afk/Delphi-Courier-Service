@@ -1,0 +1,497 @@
+object FrmAdminViewOrder: TFrmAdminViewOrder
+  Left = 0
+  Top = 0
+  Caption = 'FrmAdminViewOrder'
+  ClientHeight = 470
+  ClientWidth = 800
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ImgViewOrder: TImage
+    Left = 687
+    Top = 283
+    Width = 105
+    Height = 39
+  end
+  object LblViewOrder: TLabel
+    Left = 128
+    Top = 16
+    Width = 550
+    Height = 45
+    Caption = 'MANAGE CUSTOMER ORDERS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -37
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LblTime: TLabel
+    Left = 10
+    Top = 8
+    Width = 47
+    Height = 16
+    Caption = 'LblTime'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object BtnClose: TButton
+    Left = 759
+    Top = 8
+    Width = 33
+    Height = 33
+    Caption = 'X'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = BtnCloseClick
+  end
+  object BtnHelp: TButton
+    Left = 720
+    Top = 8
+    Width = 33
+    Height = 33
+    Caption = '?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = BtnHelpClick
+  end
+  object DBGCustomer: TDBGrid
+    Left = 32
+    Top = 67
+    Width = 582
+    Height = 86
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object BtnFirst: TButton
+    Left = 32
+    Top = 160
+    Width = 25
+    Height = 25
+    Caption = #8656
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = BtnFirstClick
+  end
+  object BtnBefore: TButton
+    Left = 55
+    Top = 159
+    Width = 25
+    Height = 25
+    Caption = #8592
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = BtnBeforeClick
+  end
+  object BtnNext: TButton
+    Left = 86
+    Top = 160
+    Width = 25
+    Height = 25
+    Caption = #8594
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = BtnNextClick
+  end
+  object BtnLast: TButton
+    Left = 109
+    Top = 160
+    Width = 25
+    Height = 25
+    Caption = #8658
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    OnClick = BtnLastClick
+  end
+  object BtnUnassign: TButton
+    Left = 631
+    Top = 67
+    Width = 145
+    Height = 26
+    Caption = 'UNASSIGNED ORDERS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = BtnUnassignClick
+  end
+  object DBGStaff: TDBGrid
+    Left = 32
+    Top = 190
+    Width = 582
+    Height = 86
+    TabOrder = 8
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object BtnFirst2: TButton
+    Left = 32
+    Top = 283
+    Width = 25
+    Height = 25
+    Caption = #8656
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 9
+    OnClick = BtnFirst2Click
+  end
+  object BtnBefore2: TButton
+    Left = 55
+    Top = 283
+    Width = 25
+    Height = 25
+    Caption = #8592
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 10
+    OnClick = BtnBefore2Click
+  end
+  object BtnNext2: TButton
+    Left = 86
+    Top = 283
+    Width = 25
+    Height = 25
+    Caption = #8594
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 11
+    OnClick = BtnNext2Click
+  end
+  object BtnLast2: TButton
+    Left = 109
+    Top = 283
+    Width = 25
+    Height = 25
+    Caption = #8658
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 12
+    OnClick = BtnLast2Click
+  end
+  object BtnAssign: TButton
+    Left = 631
+    Top = 99
+    Width = 145
+    Height = 26
+    Caption = 'ASSIGNED ORDERS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 13
+    OnClick = BtnAssignClick
+  end
+  object BtnRefresh: TButton
+    Left = 525
+    Top = 160
+    Width = 89
+    Height = 25
+    Caption = 'REFRESH'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 14
+    OnClick = BtnRefreshClick
+  end
+  object BtnRefresh2: TButton
+    Left = 525
+    Top = 283
+    Width = 89
+    Height = 25
+    Caption = 'REFRESH'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 15
+    OnClick = BtnRefresh2Click
+  end
+  object BtnAvailable: TButton
+    Left = 631
+    Top = 191
+    Width = 145
+    Height = 34
+    Caption = 'AVAILABLE'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 16
+    OnClick = BtnAvailableClick
+  end
+  object BtnUnavailable: TButton
+    Left = 631
+    Top = 243
+    Width = 145
+    Height = 34
+    Caption = 'UNAVAILABLE'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 17
+    OnClick = BtnUnavailableClick
+  end
+  object BtnBack: TButton
+    Left = 8
+    Top = 429
+    Width = 89
+    Height = 33
+    Caption = 'Back'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 18
+    OnClick = BtnBackClick
+  end
+  object PnlAssign: TPanel
+    Left = 150
+    Top = 318
+    Width = 337
+    Height = 134
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 19
+    object LblAssignCustomer: TLabel
+      Left = 8
+      Top = 52
+      Width = 113
+      Height = 16
+      Caption = 'ASSIGN STAFF TO:'
+    end
+    object LblAssignStaff: TLabel
+      Left = 8
+      Top = 82
+      Width = 161
+      Height = 16
+      Caption = 'SELECT STAFF TO ASSIGN:'
+    end
+    object LblAssignStaffToOrders: TLabel
+      Left = 24
+      Top = 5
+      Width = 281
+      Height = 25
+      Caption = 'ASSIGN STAFF TO ORDERS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object CmbCustomer: TComboBox
+      Left = 176
+      Top = 44
+      Width = 145
+      Height = 24
+      TabOrder = 0
+      Text = 'CmbCustomer'
+    end
+    object CmbStaff: TComboBox
+      Left = 175
+      Top = 74
+      Width = 145
+      Height = 24
+      TabOrder = 1
+      Text = 'CmbStaff'
+    end
+    object BtnConfirm: TButton
+      Left = 64
+      Top = 104
+      Width = 169
+      Height = 25
+      Caption = 'CONFIRM'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = BtnConfirmClick
+    end
+  end
+  object BtnManageCustomers: TButton
+    Left = 525
+    Top = 328
+    Width = 244
+    Height = 34
+    Caption = 'MANAGE CUSTOMERS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 20
+    OnClick = BtnManageCustomersClick
+  end
+  object BtnManageStaff: TButton
+    Left = 525
+    Top = 368
+    Width = 244
+    Height = 34
+    Caption = 'MANAGE STAFF'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 21
+    OnClick = BtnManageStaffClick
+  end
+  object BtnManageAllOrders: TButton
+    Left = 525
+    Top = 408
+    Width = 244
+    Height = 34
+    Caption = 'MANAGE ALL ORDERS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 22
+    OnClick = BtnManageAllOrdersClick
+  end
+  object BitBtnHint1: TBitBtn
+    Left = 489
+    Top = 160
+    Width = 30
+    Height = 25
+    DoubleBuffered = True
+    Kind = bkIgnore
+    ParentDoubleBuffered = False
+    TabOrder = 23
+    OnClick = BitBtnHint1Click
+  end
+  object BitBtnHint2: TBitBtn
+    Left = 492
+    Top = 282
+    Width = 27
+    Height = 25
+    DoubleBuffered = True
+    Kind = bkIgnore
+    ParentDoubleBuffered = False
+    TabOrder = 24
+    OnClick = BitBtnHint2Click
+  end
+  object BitBtnHint3: TBitBtn
+    Left = 389
+    Top = 422
+    Width = 30
+    Height = 25
+    DoubleBuffered = True
+    Kind = bkIgnore
+    ParentDoubleBuffered = False
+    TabOrder = 25
+    OnClick = BitBtnHint3Click
+  end
+  object BtnMinMax: TButton
+    Left = 631
+    Top = 131
+    Width = 145
+    Height = 26
+    Caption = 'MIN AND MAX OWED'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 26
+    OnClick = BtnMinMaxClick
+  end
+  object TTime: TTimer
+    OnTimer = TTimeTimer
+    Left = 16
+    Top = 32
+  end
+end
