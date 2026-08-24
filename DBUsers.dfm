@@ -5,8 +5,8 @@ object DMUsers: TDMUsers
   Width = 459
   object ADOConnection1: TADOConnection
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\IT\IT PAT\PAT\DA' +
-      'TABASES\USERS DATABASE.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DATABASES\USERS' +
+      ' DATABASE.mdb;Persist Security Info=False'
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 240
     Top = 112

@@ -15,8 +15,8 @@ object Form6: TForm6
   TextHeight = 13
   object ADOConnection1: TADOConnection
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\IT\IT PAT\PAT\DA' +
-      'TABASES\USER DATABASE.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DATABASES\USERS' +
+      ' DATABASE.mdb;Persist Security Info=False'
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 248
     Top = 112

@@ -36,7 +36,7 @@ begin
   DscCustomer := TDataSource.Create(DMUsers);
 
   ConUser.ConnectionString :=
-    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\IT\IT PAT\PAT\DATABASES\USER DATABASE.mdb;Persist Security Info=False';
+    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DATABASES\USERS DATABASE.mdb;Persist Security Info=False';
   ConUser.LoginPrompt := false;
   ConUser.Open;
 
@@ -54,7 +54,7 @@ begin
   DscAdmin := TDataSource.Create(DMUsers);
 
   ConUser.ConnectionString :=
-    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\IT\IT PAT\PAT\DATABASES\USER DATABASE.mdb;Persist Security Info=False';
+    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DATABASES\USERS DATABASE.mdb;Persist Security Info=False';
   ConUser.LoginPrompt := false;
   ConUser.Open;
 
@@ -72,7 +72,7 @@ begin
   DscStaff := TDataSource.Create(DMUsers);
 
   ConUser.ConnectionString :=
-    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\IT\IT PAT\PAT\DATABASES\USER DATABASE.mdb;Persist Security Info=False';
+    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DATABASES\USERS DATABASE.mdb;Persist Security Info=False';
   ConUser.LoginPrompt := false;
   ConUser.Open;
 
